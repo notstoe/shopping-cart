@@ -1,0 +1,31 @@
+.navBar {
+	background-color: var(--deepblack);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 13px 40px;
+}
+
+.navBarLinks {
+	display: flex;
+	justify-content: space-between;
+	flex: 0.13 1 0%;
+}
+
+#logo {
+	text-decoration: none;
+	color: var(--lightyellow);
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.links {
+	text-decoration: none;
+	color: var(--lightgray);
+	font-size: 17px;
+	margin-left: 5px;
+}
+
+.links:hover {
+	color: var(--lightyellow);
+}
