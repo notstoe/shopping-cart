@@ -1,5 +1,15 @@
+/* TITLE */
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+
+/* body */
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400&display=swap");
+
 :root {
 	--lightyellow: rgb(245, 191, 43);
-	--lightgray: rgb(197, 191, 181);
+	--lightgray: #c5bfb5;
 	--deepblack: rgb(0, 0, 0);
+}
+
+body {
+	font-family: "Jost", sans-serif;
 }

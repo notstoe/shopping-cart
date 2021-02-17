@@ -1,0 +1,52 @@
+.homeContent {
+	color: var(--lightgray);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 18.5vh;
+	margin-right: 14vw;
+}
+
+.quote {
+	display: flex;
+	flex-direction: column;
+	text-align: end;
+	min-width: 400px;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+#shopBtn {
+	font-weight: 400px;
+	align-self: center;
+	text-align: center;
+	border: 1px solid var(--lightgray);
+	padding: 6px 50px;
+	text-decoration: none;
+	color: var(--lightgray);
+	animation: wiggle 5s alternate infinite;
+}
+
+#shopBtn:hover {
+	background-color: var(--lightgray);
+	color: var(--deepblack);
+	cursor: pointer;
+}
+
+@keyframes wiggle {
+	0% {
+		transform: rotate(0deg);
+	}
+	97% {
+		transform: rotate(0deg);
+	}
+	98% {
+		transform: rotate(5deg);
+	}
+	99% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}

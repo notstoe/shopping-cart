@@ -16,7 +16,8 @@
 	text-decoration: none;
 	color: var(--lightyellow);
 	font-weight: 600;
-	font-size: 18px;
+	font-size: 26px;
+	font-family: "Poiret One", cursive;
 }
 
 .links {

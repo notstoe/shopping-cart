@@ -1,10 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Brygada+1918&display=swap");
-
 .pageContainer {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	font-family: "Brygada 1918", serif;
 }
 
 .content {
@@ -14,4 +11,8 @@
 	background-size: cover;
 	background-color: var(--deepblack);
 	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
 }
