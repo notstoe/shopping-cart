@@ -13,7 +13,7 @@ function App() {
 					<Switch>
 						<Route path="/" component={Home}></Route>
 						{/* <Route path="/shop" Component={Shop}></Route> */}
-						{/* <Route path="/cart" Component={Cart}></Route> */}
+						{/* <Route path="/checkout" Component={Checkout}></Route> */}
 					</Switch>
 				</div>
 			</div>
