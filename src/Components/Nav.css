@@ -24,9 +24,28 @@
 	text-decoration: none;
 	color: var(--lightgray);
 	font-size: 17px;
-	margin-left: 5px;
+	margin-left: 10px;
 }
 
 .links:hover {
 	color: var(--lightyellow);
+}
+
+.links:hover > #cartIcon {
+	fill: var(--lightyellow);
+}
+
+#cartIcon {
+	fill: var(--lightgray);
+	width: 20px;
+}
+
+#numCart {
+	font-size: 12px;
+}
+
+#cartContainer {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
