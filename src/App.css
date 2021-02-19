@@ -6,13 +6,19 @@
 
 .content {
 	flex: 1 1 0%;
+	display: flex;
+	flex-direction: column;
+}
+
+.homeMain {
+	flex: 1 1 0%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
 	background-image: url("./assets/background.png");
 	background-position: center;
 	background-size: cover;
 	background-color: var(--deepblack);
 	background-repeat: no-repeat;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-end;
 }
