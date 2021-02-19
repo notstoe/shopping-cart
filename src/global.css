@@ -5,9 +5,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400&display=swap");
 
 :root {
-	--lightyellow: rgb(245, 191, 43);
+	--lightyellow: #f5bf2b;
 	--lightgray: rgb(197, 191, 181);
 	--deepblack: rgb(0, 0, 0);
+	--coolwhite: #e3e3e2;
 }
 
 body {

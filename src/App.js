@@ -10,14 +10,18 @@ function App() {
 		<Router>
 			<div className="pageContainer">
 				<Nav />
-				<div className="content">
+				<div className="main">
 					<Switch>
 						<Route exact path="/">
-							<div className="homeMain">
+							<div className="homeContainer">
 								<Home />
 							</div>
 						</Route>
-						<Route path="/shop" Component={Shop}></Route>
+						<Route path="/shop">
+							<div className="shopContainer">
+								<Shop />
+							</div>
+						</Route>
 						{/* <Route path="/checkout" Component={Checkout}></Route> */}
 					</Switch>
 				</div>

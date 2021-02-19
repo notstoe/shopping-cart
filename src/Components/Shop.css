@@ -1,0 +1,15 @@
+.shopContent {
+	min-height: 80vh;
+	background-color: var(--coolwhite);
+	padding: 20px 30px;
+	border-radius: 3px;
+}
+
+/* 
+TODO - apply these on each display
+.productPic {
+	width: 300px;
+	box-shadow: var(--lightgray) 2px 2px 15px;
+	border-radius: 50%;
+	padding: 5px;
+} */
