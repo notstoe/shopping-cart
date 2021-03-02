@@ -1,27 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Nav.css";
+
+import styles from "../styles/Components/Nav.module.css";
 
 function Nav() {
 	return (
-		<div className="navBar">
-			<Link to="/" id="logo">
-				CLOCKY
-			</Link>
-			<ul className="navBarLinks">
+		<div className={styles.navBar}>
+			<Link to="/">CLOCKY</Link>
+			<ul>
 				<li>
-					<Link className="links" to="/">
-						Home
-					</Link>
+					<Link to="/">Home</Link>
 				</li>
 				<li>
-					<Link className="links" to="/shop">
-						Shop
-					</Link>
+					<Link to="/shop">Shop</Link>
 				</li>
 				<li>
-					<Link id="cartContainer" className="links" to="/checkout">
-						<svg id="cartIcon" x="0px" y="0px" viewBox="0 0 476.944 476.944">
+					<Link className={styles.cartContainer} to="/checkout">
+						<svg x="0px" y="0px" viewBox="0 0 476.944 476.944">
 							<g>
 								<path
 									d="M84.176,379.875c-26.762,0-48.535,21.772-48.535,48.534s21.772,48.534,48.535,48.534c26.762,0,48.534-21.772,48.534-48.534
@@ -39,7 +34,7 @@ function Nav() {
 								/>
 							</g>
 						</svg>
-						<span id="numCart">0</span>
+						<span>0</span>
 					</Link>
 				</li>
 			</ul>

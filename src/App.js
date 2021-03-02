@@ -1,6 +1,8 @@
 import React from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
-import "./App.css";
+
+import styles from "./styles/App.module.css";
+
 import Nav from "./Components/Nav";
 import Home from "./Components/Home";
 import Shop from "./Components/Shop";
@@ -8,17 +10,17 @@ import Shop from "./Components/Shop";
 function App() {
 	return (
 		<Router>
-			<div className="pageContainer">
+			<div className={styles.pageContainer}>
 				<Nav />
-				<div className="main">
+				<div>
 					<Switch>
 						<Route exact path="/">
-							<div className="homeContainer">
+							<div className={styles.homeContainer}>
 								<Home />
 							</div>
 						</Route>
 						<Route path="/shop">
-							<div className="shopContainer">
+							<div className={styles.shopContainer}>
 								<Shop />
 							</div>
 						</Route>
