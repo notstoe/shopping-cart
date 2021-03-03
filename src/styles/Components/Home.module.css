@@ -20,6 +20,7 @@
 	align-self: center;
 	text-align: center;
 	border: 1px solid var(--lightgray);
+	border-radius: 2px;
 	padding: 0.375rem 3.12rem;
 	color: var(--lightgray);
 	animation: wiggle 5s alternate infinite;
