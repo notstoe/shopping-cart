@@ -22,7 +22,6 @@
 	text-align: center;
 	border: 1px solid var(--lightgray);
 	padding: 6px 50px;
-	text-decoration: none;
 	color: var(--lightgray);
 	animation: wiggle 5s alternate infinite;
 }
@@ -30,7 +29,6 @@
 .homeContent a:hover {
 	background-color: var(--lightgray);
 	color: var(--deepblack);
-	cursor: pointer;
 }
 
 @keyframes wiggle {
