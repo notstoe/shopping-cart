@@ -1,12 +1,31 @@
 .shopContent {
 	min-height: 80vh;
-	background-color: var(--coolwhite);
+	border-radius: 12px;
+
+	background-color: var(--fullwhite);
+
 	padding: 20px 30px;
-	border-radius: 3px;
+	margin-top: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+.shopContent h1,
+h2 {
+	font-weight: 300;
+	font-size: 1.2rem;
+	text-align: center;
+
+	margin-bottom: 1.5rem;
+}
+
+.shopContent img {
+	width: 13rem;
+	border-radius: 50%;
+
+	margin-bottom: 0.5rem;
 }
 
 /* 
-TODO - apply these on each display
 .productPic {
 	width: 300px;
 	box-shadow: var(--lightgray) 2px 2px 15px;
