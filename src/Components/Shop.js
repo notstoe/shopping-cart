@@ -1,13 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styles from "../styles/Components/Shop.module.css";
-// import worldMap from "../assets/worldMap.webp";
+
+import { products } from "../assets/products.js";
 
 function Shop() {
+	const shopDisplay = products.map((currentElement, index) => {
+		return (
+			<div key={index}>
+				<Link to={`/${index}`}>
+					<img src={currentElement.img} alt={currentElement.alt} />
+				</Link>
+				<h2>${currentElement.price}</h2>
+			</div>
+		);
+	});
+
 	return (
 		<div className={styles.shopContent}>
-			{/* <img className="productPic" src={worldMap} alt="worldMap" /> */}
-			{/*TODO - create a component for the products imgs*/}
+			<h1>WALL CLOCKS</h1>
+			<div>{shopDisplay}</div>
 		</div>
 	);
 }
