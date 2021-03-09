@@ -4,7 +4,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	min-height: 10rem;
-	margin-right: 12rem;
+	margin-right: 17rem;
 }
 
 .homeContent > div {
@@ -12,8 +12,8 @@
 	flex-direction: column;
 	text-align: end;
 	min-width: 20rem;
-	font-size: 1.2rem;
-	line-height: 1.7rem;
+	font-size: 1.3rem;
+	line-height: 1.9rem;
 }
 
 .homeContent a {
@@ -21,9 +21,9 @@
 	text-align: center;
 	border: 1px solid var(--lightgray);
 	border-radius: 2px;
-	padding: 0.375rem 3.12rem;
+	padding: 0.4rem 3.2rem;
 	color: var(--lightgray);
-	animation: wiggle 5s alternate infinite;
+	animation: wiggle 4.5s alternate infinite;
 	transition: background-color 250ms, color 250ms;
 }
 

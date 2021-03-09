@@ -11,16 +11,34 @@
 }
 
 .homeContainer {
+	position: relative;
+
 	flex: 1 1 0%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-end;
-	background-image: url("../assets/background.png");
-	background-position: center;
-	background-size: cover;
+
+	background-image: url("../assets/background-edited.png");
+	background-position: left -2vw bottom 48%;
+	background-size: 108rem;
 	background-color: var(--deepblack);
 	background-repeat: no-repeat;
+}
+
+.homeContainer > :after {
+	content: "";
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 1px;
+	width: 0%;
+	background: var(--lightgray);
+	animation: appear 600ms 1s forwards;
+	transition: width 0.2s ease-out;
 }
 
 .shopContainer {
@@ -35,4 +53,13 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+}
+
+@keyframes appear {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 50%;
+	}
 }
