@@ -10,12 +10,12 @@ import worldMap from "./worldMap.png";
 // Array containing all products
 
 export const products = [
-	{ img: backtothefuture, alt: "Back to the future clock", price: "39.99" },
-	{ img: tangieWhite, alt: "Tangerine White clock", price: "19.99" },
-	{ img: honeycomb, alt: "Honeycomb clock", price: "19.99" },
-	{ img: legendOfZelda, alt: "Legend of Zelda clock", price: "49.99" },
-	{ img: minimalist, alt: "Minimalist clock", price: "19.99" },
-	{ img: steamPunk, alt: "Steam punk clock", price: "19.99" },
-	{ img: trusttheprocess, alt: "Trust the process clock", price: "19.99" },
-	{ img: worldMap, alt: "World map clock", price: "29.99" },
+	{ img: backtothefuture, alt: "Back to the Future", price: "39.99" },
+	{ img: tangieWhite, alt: "Tangerine White", price: "19.99" },
+	{ img: honeycomb, alt: "Honeycomb", price: "19.99" },
+	{ img: legendOfZelda, alt: "Legend of Zelda", price: "49.99" },
+	{ img: minimalist, alt: "Minimalist", price: "19.99" },
+	{ img: steamPunk, alt: "Steam Punk", price: "19.99" },
+	{ img: trusttheprocess, alt: "Trust the Process", price: "19.99" },
+	{ img: worldMap, alt: "World Map", price: "29.99" },
 ];

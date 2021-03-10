@@ -6,6 +6,7 @@ import styles from "./styles/App.module.css";
 import Nav from "./Components/Nav";
 import Home from "./Pages/Home";
 import Shop from "./Pages/Shop";
+import ProdctDisplay from "./Pages/ProdctDisplay";
 
 function App() {
 	return (
@@ -19,11 +20,12 @@ function App() {
 								<Home />
 							</div>
 						</Route>
-						<Route path="/shop">
+						<Route exact path="/shop">
 							<div className={styles.shopContainer}>
 								<Shop />
 							</div>
 						</Route>
+						<Route path="/shop/:id" component={ProdctDisplay} />
 						{/* <Route path="/checkout" Component={Checkout}></Route> */}
 					</Switch>
 				</div>
