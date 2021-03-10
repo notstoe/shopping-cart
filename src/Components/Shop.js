@@ -11,8 +11,8 @@ function Shop() {
 			<div key={index}>
 				<Link to={`/${index}`}>
 					<img src={currentElement.img} alt={currentElement.alt} />
+					<h2>${currentElement.price}</h2>
 				</Link>
-				<h2>${currentElement.price}</h2>
 			</div>
 		);
 	});
