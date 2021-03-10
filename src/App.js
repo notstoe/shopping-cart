@@ -4,8 +4,8 @@ import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import styles from "./styles/App.module.css";
 
 import Nav from "./Components/Nav";
-import Home from "./Components/Home";
-import Shop from "./Components/Shop";
+import Home from "./Pages/Home";
+import Shop from "./Pages/Shop";
 
 function App() {
 	return (
