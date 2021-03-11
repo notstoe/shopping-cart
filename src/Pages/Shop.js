@@ -8,7 +8,7 @@ import { products } from "../assets/products.js";
 function Shop() {
 	const shopDisplay = products.map((currentElement, index) => {
 		return (
-			<div key={index}>
+			<div key={index} className={styles.productDisplay}>
 				<Link to={`/shop/${index}`}>
 					<img src={currentElement.img} alt={currentElement.alt} />
 					<h2>${currentElement.price}</h2>
