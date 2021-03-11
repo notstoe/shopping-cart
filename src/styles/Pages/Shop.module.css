@@ -8,6 +8,7 @@
 	padding: 2rem 5rem;
 	margin-top: 1rem;
 	margin-bottom: 2rem;
+	box-sizing: initial;
 }
 
 .shopContent h1,
