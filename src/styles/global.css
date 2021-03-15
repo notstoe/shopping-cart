@@ -16,7 +16,7 @@
 :root {
 	--lightyellow: #f5bf2b;
 	--lightgray: #c5bfb5;
-	--deepblack: rgb(0, 0, 0);
+	--deepblack: #000000;
 	--coolwhite: #e3e3e2;
 	--fullwhite: #ffffff;
 }

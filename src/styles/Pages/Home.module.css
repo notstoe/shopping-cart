@@ -1,15 +1,30 @@
 .homeContent {
 	color: var(--lightgray);
+
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+
 	min-height: 10rem;
 	margin-right: 17rem;
+}
+
+.homeContent h1 {
+	font-weight: 400;
+	font-size: 2rem;
+}
+
+.homeContent h1 span {
+	color: var(--lightyellow);
 }
 
 .homeContent > div {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+
+	height: 10vw;
+
 	text-align: end;
 	min-width: 20rem;
 	font-size: 1.3rem;
