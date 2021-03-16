@@ -11,10 +11,20 @@ import ProductDisplay from "./Pages/ProdctDisplay";
 function App() {
 	const [cartContents, setCartContents] = useState([]);
 
-	function addToCart(order) {
-		let newCartContents = cartContents.map((element) => element); //copying array to update state later
+	function addToCart(newOrder) {
+		let newCartContents = cartContents.map((element) => element);
 
-		newCartContents.push(order);
+		let existingProductKey = newCartContents.findIndex(
+			(product) => product.key === newOrder.key
+		);
+
+		if (existingProductKey < 0) {
+			//case when product doesn't exist in the cart -> findIndex() returned -1
+			newCartContents.push(newOrder);
+		} else {
+			newCartContents[existingProductKey].quantity =
+				newCartContents[existingProductKey].quantity + newOrder.quantity;
+		}
 
 		setCartContents(newCartContents);
 	}
