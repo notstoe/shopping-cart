@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import styles from "../styles/Pages/ProdctDisplay.module.css";
@@ -6,7 +6,7 @@ import styles from "../styles/Pages/ProdctDisplay.module.css";
 import { products } from "../assets/products.js";
 
 function ProdctDisplay({ match }) {
-	const arrIndex = match.params.id; //gets the position in the products array corresponding to that product
+	const arrIndex = match.params.id; //gets the index position in the products.js array corresponding to that product
 
 	const selectedProduct = {
 		name: products[arrIndex].alt,
@@ -14,8 +14,12 @@ function ProdctDisplay({ match }) {
 		price: products[arrIndex].price,
 	};
 
-	//FIXME - turn input into controlled input on state
-	// TODO - style and finish page
+	const [quantity, setQuantity] = useState(1);
+
+	function handleChangeQuantity(e) {
+		const { value } = e.target;
+		setQuantity(Math.round(Number(value)));
+	}
 
 	return (
 		<div className={styles.productDisplayContainer}>
@@ -25,7 +29,13 @@ function ProdctDisplay({ match }) {
 				<span>${selectedProduct.price}</span>
 				<div>
 					<label htmlFor="quantity">Quantity:</label>
-					<input name="quantity" value={1} type="number"></input>
+					<input
+						name="quantity"
+						type="number"
+						min="1"
+						value={quantity}
+						onChange={handleChangeQuantity}
+					></input>
 				</div>
 				<button>Add to Cart</button>
 				<Link to="/shop">Back</Link>
