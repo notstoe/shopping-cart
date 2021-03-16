@@ -15,6 +15,7 @@ function ProdctDisplay({ match, addToCart }) {
 	};
 
 	const [quantity, setQuantity] = useState(1);
+	const [isAddedToCart, setIsAddedToCart] = useState(false);
 
 	function handleChangeQuantity(e) {
 		const { value } = e.target;
@@ -23,11 +24,13 @@ function ProdctDisplay({ match, addToCart }) {
 
 	function handleBtnClick() {
 		addToCart({
-			arrIndex: arrIndex, //sending index position on the products.js array to easily retrieve img later
+			key: arrIndex, //sending index position on the products.js array to easily retrieve img later
 			name: selectedProduct.name,
 			quantity: quantity,
 			price: selectedProduct.price,
 		});
+
+		setIsAddedToCart(true);
 	}
 
 	return (
@@ -46,8 +49,24 @@ function ProdctDisplay({ match, addToCart }) {
 						onChange={handleChangeQuantity}
 					></input>
 				</div>
-				<button onClick={handleBtnClick}>Add to Cart</button>
-				<Link to="/shop">Back</Link>
+
+				{!isAddedToCart ? (
+					<>
+						<button onClick={handleBtnClick}>Add to Cart</button>
+						<Link className={styles.backLink} to="/shop">
+							Back
+						</Link>
+					</>
+				) : (
+					<>
+						<Link className={styles.checkoutLink} to="/checkout">
+							Proceed to Checkout
+						</Link>
+						<Link className={styles.backLink} to="/shop">
+							Back
+						</Link>
+					</>
+				)}
 			</div>
 		</div>
 	);
