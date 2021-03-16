@@ -47,6 +47,7 @@ function ProdctDisplay({ match, addToCart }) {
 						min="1"
 						value={quantity}
 						onChange={handleChangeQuantity}
+						disabled={isAddedToCart}
 					></input>
 				</div>
 
