@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import styles from "../styles/Components/Nav.module.css";
 
-function Nav() {
+function Nav({ cartContents }) {
+	const [totalQuantity, setTotalQuantity] = useState(0);
+
+	useEffect(() => {
+		let newQuantity = 0;
+
+		cartContents.forEach((product) => {
+			newQuantity += product.quantity;
+		});
+
+		setTotalQuantity(newQuantity);
+	}, [cartContents]);
+
 	return (
 		<div className={styles.navBar}>
 			<Link to="/">CLOCKY</Link>
@@ -34,7 +46,7 @@ function Nav() {
 								/>
 							</g>
 						</svg>
-						<span>0</span>
+						<span>{totalQuantity}</span>
 					</Link>
 				</li>
 			</ul>

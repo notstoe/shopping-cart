@@ -32,7 +32,7 @@ function App() {
 	return (
 		<Router>
 			<div className={styles.pageContainer}>
-				<Nav />
+				<Nav cartContents={cartContents} />
 				<div>
 					<Switch>
 						<Route exact path="/">
