@@ -59,7 +59,7 @@ function App() {
 							path="/checkout"
 							render={() => (
 								<div className={styles.shopContainer}>
-									<Checkout />
+									<Checkout cartContents={cartContents} />
 								</div>
 							)}
 						/>
