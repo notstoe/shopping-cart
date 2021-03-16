@@ -48,7 +48,38 @@
 .productDisplayContainer > div > div input {
 	background: var(--coolwhite);
 	width: 3rem;
+	margin-left: 0.7rem;
+	border-radius: 2px;
+
 	font-size: 1.2rem;
 	text-align: center;
-	margin-left: 0.7rem;
+}
+
+.productDisplayContainer button,
+a {
+	transition: background-color 200ms;
+}
+
+.productDisplayContainer button {
+	background: var(--lightgray);
+	border-radius: 5px;
+
+	font-size: 1.2rem;
+	padding: 0.5rem 1rem;
+}
+
+.productDisplayContainer button:hover {
+	background: var(--coolwhite);
+}
+
+.productDisplayContainer a {
+	background: var(--coolwhite);
+	border-radius: 5px;
+
+	font-size: 1rem;
+	padding: 0.2rem 0.8rem;
+}
+
+.productDisplayContainer a:hover {
+	background: var(--lightgray);
 }
