@@ -5,7 +5,7 @@ import styles from "../styles/Pages/ProdctDisplay.module.css";
 
 import { products } from "../assets/products.js";
 
-function ProdctDisplay({ match }) {
+function ProdctDisplay({ match, addToCart }) {
 	const arrIndex = match.params.id; //gets the index position in the products.js array corresponding to that product
 
 	const selectedProduct = {
@@ -19,6 +19,15 @@ function ProdctDisplay({ match }) {
 	function handleChangeQuantity(e) {
 		const { value } = e.target;
 		setQuantity(Math.round(Number(value)));
+	}
+
+	function handleBtnClick() {
+		addToCart({
+			arrIndex: arrIndex, //sending index position on the products.js array to easily retrieve img later
+			name: selectedProduct.name,
+			quantity: quantity,
+			price: selectedProduct.price,
+		});
 	}
 
 	return (
@@ -37,7 +46,7 @@ function ProdctDisplay({ match }) {
 						onChange={handleChangeQuantity}
 					></input>
 				</div>
-				<button>Add to Cart</button>
+				<button onClick={handleBtnClick}>Add to Cart</button>
 				<Link to="/shop">Back</Link>
 			</div>
 		</div>
