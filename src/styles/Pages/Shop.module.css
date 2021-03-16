@@ -1,14 +1,12 @@
 .shopContent {
-	min-height: 80vh;
-	width: 60vw;
+	flex: 1;
+	width: 100%;
+	max-width: 65rem;
 	border-radius: 12px;
 
 	background-color: var(--fullwhite);
 
 	padding: 2rem 5rem;
-	margin-top: 1rem;
-	margin-bottom: 2rem;
-	box-sizing: initial;
 }
 
 .shopContent h1,
@@ -46,10 +44,4 @@ h2 {
 	border-radius: 50%;
 
 	margin-bottom: 0.5rem;
-}
-
-@media (max-width: 760px) {
-	.shopContent {
-		width: 40vw;
-	}
 }

@@ -43,10 +43,14 @@
 
 .shopContainer {
 	flex: 1 1 0%;
+
+	padding: 1rem 1.4rem;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
 	background-color: var(--deepblack);
 	background-image: url("../assets/backgroundShop.svg");
 	background-attachment: fixed;

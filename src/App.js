@@ -7,6 +7,7 @@ import Nav from "./Components/Nav";
 import Home from "./Pages/Home";
 import Shop from "./Pages/Shop";
 import ProductDisplay from "./Pages/ProdctDisplay";
+import Checkout from "./Pages/Checkout";
 
 function App() {
 	const [cartContents, setCartContents] = useState([]);
@@ -54,7 +55,14 @@ function App() {
 								/>
 							)}
 						/>
-						{/* <Route path="/checkout" Component={Checkout}></Route> */}
+						<Route
+							path="/checkout"
+							render={() => (
+								<div className={styles.shopContainer}>
+									<Checkout />
+								</div>
+							)}
+						/>
 					</Switch>
 				</div>
 			</div>
