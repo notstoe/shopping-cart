@@ -1,15 +1,19 @@
 .navBar {
 	background-color: var(--deepblack);
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 	padding: 1.1rem 2.5rem;
 }
 
 .navBar ul {
+	flex: 0.13 1 0%;
+
 	display: flex;
 	justify-content: space-between;
-	flex: 0.13 1 0%;
+	align-items: center;
 }
 
 .navBar > a {
@@ -23,6 +27,7 @@
 	color: var(--lightgray);
 	font-size: 1.06rem;
 	margin-left: 0.8rem;
+
 	transition: color 300ms;
 }
 
