@@ -12,15 +12,20 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+
+	padding: 0.7rem 1.2rem;
 }
 
 .productDisplayContainer > div {
-	min-height: 86vh;
+	flex: 1;
+
 	border-radius: 12px;
+	width: 100%;
+	max-width: 43rem;
 
 	background-color: var(--fullwhite);
 
-	padding: 1.5rem 11rem;
+	/* padding: 1.5rem 11rem; */
 
 	display: flex;
 	flex-direction: column;
@@ -31,6 +36,7 @@
 .productDisplayContainer > div h1 {
 	font-weight: 300;
 	font-size: 1.45rem;
+	margin-top: 1rem;
 }
 
 .productDisplayContainer img {
@@ -80,6 +86,8 @@ a {
 
 	font-size: 1rem;
 	padding: 0.4rem 1rem;
+
+	margin-bottom: 1rem;
 }
 
 .backLink:hover {
