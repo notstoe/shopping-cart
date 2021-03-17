@@ -16,6 +16,8 @@
 }
 
 .checkout h1 {
+	flex: 0.03;
+
 	font-weight: 300;
 	font-size: 1.45rem;
 	text-align: center;
@@ -62,26 +64,28 @@
 	max-width: 28rem;
 
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 
 	position: relative;
 }
 
-.checkoutFull > div {
+.checkoutFull > :first-child {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
 	width: 100%;
-	height: 9.5rem;
+	/* height: 9.5rem; */
 }
 
-.checkoutFull > div img {
+.checkoutFull > :first-child img {
 	border-radius: 50%;
 	width: 9rem;
 }
 
-.checkoutFull > div section {
+.checkoutFull > :first-child section {
 	flex: 1;
 
 	display: flex;
@@ -92,34 +96,34 @@
 	height: 8.5rem;
 }
 
-.checkoutFull > div section h2 {
+.checkoutFull > :first-child section h2 {
 	font-size: 1.3rem;
 }
 
-.checkoutFull > div section h3 {
+.checkoutFull > :first-child section h3 {
 	font-size: 1.2rem;
 	font-weight: 400;
 	text-align: center;
 }
 
-.checkoutFull > div section div {
+.checkoutFull > :first-child section div {
 	flex: 1;
 
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	align-items: center;
 }
 
-.checkoutFull > div section div input {
-	max-width: 7rem;
-	margin-left: 2rem;
+.checkoutFull > :first-child section div input {
+	max-width: 5.2rem;
+	border-radius: 2px;
 
 	background: var(--coolwhite);
 
 	text-align: center;
 }
 
-.checkoutFull > div section div span {
+.checkoutFull > :first-child section div span {
 	background: var(--lightgray);
 
 	border-radius: 50%;
@@ -132,11 +136,32 @@
 	line-height: 1.7rem;
 
 	cursor: pointer;
+
+	transition: all 180ms;
 }
 
-.checkoutFull > div section div :last-child {
+.checkoutFull > :first-child section div span:hover {
+	background: var(--coolwhite);
+}
+
+.checkoutFull > :first-child section div span:active {
+	background: var(--lightgray);
+}
+
+.checkoutFull > :first-child section div :last-child {
 	background: var(--lightyellow);
 }
+
+.checkoutFull > :first-child section div :last-child:hover {
+	background: var(--deepblack);
+	color: var(--lightyellow);
+}
+
+.checkoutFull > :first-child section div :last-child:active {
+	background: var(--lightyellow);
+}
+
+/* removing default arrows from input field */
 
 .checkoutFull input::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
@@ -162,3 +187,82 @@
 	width: 70%;
 	background: var(--lightgray);
 } */
+
+.checkoutFull > section {
+	flex: 1;
+
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+
+	margin-bottom: 2rem;
+	width: 100%;
+	max-width: 22rem;
+
+	font-size: 1.3rem;
+}
+
+.checkoutFull > section :first-child {
+	flex: 0.3;
+}
+
+.checkoutFull > section :last-child {
+	background: var(--coolwhite);
+
+	padding: 0.25rem 1.1rem;
+	border-radius: 2px;
+
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+.checkoutFull > :last-child {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.2rem;
+
+	width: 100%;
+	max-width: 17.7rem;
+}
+
+.checkoutFull > :last-child button {
+	background: var(--lightgray);
+
+	border-radius: 5px;
+	padding: 0.5rem 1.1rem;
+
+	font-size: inherit;
+}
+
+.checkoutFull > :last-child button:hover {
+	background: var(--coolwhite);
+}
+
+.checkoutFull > :last-child a {
+	background: var(--coolwhite);
+
+	border-radius: 5px;
+	padding: 0.5rem 1.1rem;
+
+	font-size: inherit;
+}
+
+.checkoutFull > :last-child a:hover {
+	background: var(--lightgray);
+}
+
+.checkoutFull > :last-child button,
+a {
+	transition: background-color 200ms;
+}
+
+@media (max-width: 400px) {
+	.checkoutFull > :first-child img {
+		width: 6.6rem;
+	}
+
+	.checkoutFull > :first-child section div input {
+		width: 3.6rem;
+	}
+}

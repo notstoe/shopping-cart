@@ -32,6 +32,14 @@ function Checkout({ cartContents }) {
 							<h3>$39,99</h3>
 						</section>
 					</div>
+					<section>
+						<span>TOTAL: </span>
+						<span>$39,99</span>
+					</section>
+					<div>
+						<button>Proceed to Payment</button>
+						<Link to="/shop">Back</Link>
+					</div>
 				</div>
 			) : (
 				<div className={styles.checkoutEmpty}>
