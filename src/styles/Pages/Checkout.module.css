@@ -161,18 +161,6 @@
 	background: var(--lightyellow);
 }
 
-/* removing default arrows from input field */
-
-.checkoutFull input::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
-}
-
-.checkoutFull input[type="number"] {
-	-moz-appearance: textfield;
-}
-
 /* .checkoutFull > div :after {
 	content: "";
 	margin-left: auto;

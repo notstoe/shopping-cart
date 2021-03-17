@@ -79,6 +79,18 @@ a {
 	text-decoration: none;
 }
 
+/* removing default arrows from input field */
+
+input::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
 @media (max-width: 1080px) {
 	html {
 		font-size: 93.75%;
