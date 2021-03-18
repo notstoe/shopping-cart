@@ -67,25 +67,40 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-
-	position: relative;
 }
 
-.checkoutFull > :first-child {
+.checkoutFull .singleOrder {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
 	width: 100%;
-	/* height: 9.5rem; */
+	padding: 1.6rem 0 1rem 0;
+
+	position: relative;
 }
 
-.checkoutFull > :first-child img {
+.checkoutFull .singleOrder > :after {
+	content: "";
+	margin-left: auto;
+	margin-right: auto;
+
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	height: 0.9px;
+	width: 90%;
+	background: var(--lightgray);
+}
+
+.checkoutFull .singleOrder img {
 	border-radius: 50%;
 	width: 9rem;
 }
 
-.checkoutFull > :first-child section {
+.checkoutFull .singleOrder section {
 	flex: 1;
 
 	display: flex;
@@ -96,17 +111,17 @@
 	height: 8.5rem;
 }
 
-.checkoutFull > :first-child section h2 {
+.checkoutFull .singleOrder section h2 {
 	font-size: 1.3rem;
 }
 
-.checkoutFull > :first-child section h3 {
+.checkoutFull .singleOrder section h3 {
 	font-size: 1.2rem;
 	font-weight: 400;
 	text-align: center;
 }
 
-.checkoutFull > :first-child section div {
+.checkoutFull .singleOrder section div {
 	flex: 1;
 
 	display: flex;
@@ -114,7 +129,7 @@
 	align-items: center;
 }
 
-.checkoutFull > :first-child section div input {
+.checkoutFull .singleOrder section div input {
 	max-width: 5.2rem;
 	border-radius: 2px;
 
@@ -123,7 +138,7 @@
 	text-align: center;
 }
 
-.checkoutFull > :first-child section div span {
+.checkoutFull .singleOrder section div span {
 	background: var(--lightgray);
 
 	border-radius: 50%;
@@ -140,41 +155,26 @@
 	transition: all 180ms;
 }
 
-.checkoutFull > :first-child section div span:hover {
+.checkoutFull .singleOrder section div span:hover {
 	background: var(--coolwhite);
 }
 
-.checkoutFull > :first-child section div span:active {
+.checkoutFull .singleOrder section div span:active {
 	background: var(--lightgray);
 }
 
-.checkoutFull > :first-child section div :last-child {
+.checkoutFull .singleOrder section div :last-child {
 	background: var(--lightyellow);
 }
 
-.checkoutFull > :first-child section div :last-child:hover {
+.checkoutFull .singleOrder section div :last-child:hover {
 	background: var(--deepblack);
 	color: var(--lightyellow);
 }
 
-.checkoutFull > :first-child section div :last-child:active {
+.checkoutFull .singleOrder section div :last-child:active {
 	background: var(--lightyellow);
 }
-
-/* .checkoutFull > div :after {
-	content: "";
-	margin-left: auto;
-	margin-right: auto;
-
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-
-	height: 1px;
-	width: 70%;
-	background: var(--lightgray);
-} */
 
 .checkoutFull > section {
 	flex: 1;
@@ -183,9 +183,9 @@
 	justify-content: center;
 	align-items: flex-end;
 
-	margin-bottom: 2rem;
 	width: 100%;
 	max-width: 22rem;
+	padding: 1.8rem 0;
 
 	font-size: 1.3rem;
 }
@@ -246,11 +246,11 @@ a {
 }
 
 @media (max-width: 400px) {
-	.checkoutFull > :first-child img {
+	.checkoutFull .singleOrder img {
 		width: 6.6rem;
 	}
 
-	.checkoutFull > :first-child section div input {
+	.checkoutFull .singleOrder section div input {
 		width: 3.6rem;
 	}
 }
