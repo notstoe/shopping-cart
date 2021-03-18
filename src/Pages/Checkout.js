@@ -14,24 +14,32 @@ function Checkout({ cartContents }) {
 		if (cartContents.length === 0) setIsThereProducts(false);
 	}, [cartContents]);
 
+	const checkoutComponents = cartContents.map((order) => {
+		return (
+			<div className={styles.singleOrder}>
+				<img src={products[order.key].img} alt={order.name} />
+				<section>
+					<h2>{order.name}</h2>
+					<div>
+						{/* FIXME - send props from App with quantity on state and onChange handler */}
+						<input type="number" value={order.quantity} />
+						{/* TODO - add functionality to the buttons */}
+						<span>-</span>
+						<span>+</span>
+						<span>x</span>
+					</div>
+					<h3>${order.price}</h3>
+				</section>
+			</div>
+		);
+	});
+
 	return (
 		<div className={styles.checkout}>
 			<h1>CHECKOUT</h1>
 			{isThereProducts ? (
 				<div className={styles.checkoutFull}>
-					<div>
-						<img src={products[0].img} alt={products[0].alt} />
-						<section>
-							<h2>Back to the Future</h2>
-							<div>
-								<input type="number" value="1" />
-								<span>-</span>
-								<span>+</span>
-								<span>x</span>
-							</div>
-							<h3>$39,99</h3>
-						</section>
-					</div>
+					{checkoutComponents}
 					<section>
 						<span>TOTAL: </span>
 						<span>$39,99</span>
