@@ -31,7 +31,7 @@ function Checkout({ cartContents, handleChange, handleBtnCheckout }) {
 						{/* TODO - add functionality to the buttons */}
 						<span onClick={handleBtnCheckout}>-</span>
 						<span onClick={handleBtnCheckout}>+</span>
-						<span>x</span>
+						<span onClick={handleBtnCheckout}>x</span>
 					</div>
 					<h3>${order.price}</h3>
 				</section>

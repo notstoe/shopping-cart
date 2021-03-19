@@ -63,6 +63,9 @@ function App() {
 				newCartContents[productToBeChangedIndex].quantity -= 1;
 			}
 		}
+		if (btnText === "x") {
+			newCartContents.splice(productToBeChangedIndex, 1);
+		}
 
 		setCartContents(newCartContents);
 	}
