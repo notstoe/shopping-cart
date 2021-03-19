@@ -8,9 +8,20 @@ import styles from "../styles/Pages/Checkout.module.css";
 
 function Checkout({ cartContents, handleChange, handleBtnCheckout }) {
 	const [isThereProducts, setIsThereProducts] = useState();
+	const [totalPrice, setTotalPrice] = useState();
 
 	useEffect(() => {
-		if (cartContents.length > 0) setIsThereProducts(true);
+		if (cartContents.length > 0) {
+			setIsThereProducts(true);
+
+			const total = cartContents.reduce(
+				(accumulator, product) =>
+					(accumulator += product.quantity * product.price),
+				0
+			);
+
+			setTotalPrice(total.toFixed(2));
+		}
 		if (cartContents.length === 0) setIsThereProducts(false);
 	}, [cartContents]);
 
@@ -47,7 +58,7 @@ function Checkout({ cartContents, handleChange, handleBtnCheckout }) {
 					{checkoutComponents}
 					<section>
 						<span>TOTAL: </span>
-						<span>$39,99</span>
+						<span>${totalPrice}</span>
 					</section>
 					<div>
 						<button>Proceed to Payment</button>
