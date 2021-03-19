@@ -45,6 +45,28 @@ function App() {
 		setCartContents(newCartContents);
 	}
 
+	function handleBtnCheckout(e) {
+		const productName = e.target.offsetParent.childNodes[0].alt;
+		const btnText = e.target.textContent;
+
+		const productToBeChangedIndex = cartContents.findIndex(
+			(arrElement) => arrElement.name === productName
+		);
+
+		let newCartContents = [...cartContents];
+
+		if (btnText === "+") newCartContents[productToBeChangedIndex].quantity += 1;
+		if (btnText === "-") {
+			if (newCartContents[productToBeChangedIndex].quantity < 2) {
+				return;
+			} else {
+				newCartContents[productToBeChangedIndex].quantity -= 1;
+			}
+		}
+
+		setCartContents(newCartContents);
+	}
+
 	return (
 		<Router>
 			<div className={styles.pageContainer}>
@@ -77,6 +99,7 @@ function App() {
 									<Checkout
 										cartContents={cartContents}
 										handleChange={handleChange}
+										handleBtnCheckout={handleBtnCheckout}
 									/>
 								</div>
 							)}

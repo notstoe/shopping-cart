@@ -6,7 +6,7 @@ import { products } from "../assets/products.js";
 
 import styles from "../styles/Pages/Checkout.module.css";
 
-function Checkout({ cartContents, handleChange }) {
+function Checkout({ cartContents, handleChange, handleBtnCheckout }) {
 	const [isThereProducts, setIsThereProducts] = useState();
 
 	useEffect(() => {
@@ -22,15 +22,15 @@ function Checkout({ cartContents, handleChange }) {
 					<h2>{order.name}</h2>
 					<div>
 						<input
+							name={order.name}
 							type="number"
 							min="1"
-							name={order.name}
 							value={order.quantity}
 							onChange={handleChange}
 						/>
 						{/* TODO - add functionality to the buttons */}
-						<span>-</span>
-						<span>+</span>
+						<span onClick={handleBtnCheckout}>-</span>
+						<span onClick={handleBtnCheckout}>+</span>
 						<span>x</span>
 					</div>
 					<h3>${order.price}</h3>
