@@ -13,7 +13,7 @@ function App() {
 	const [cartContents, setCartContents] = useState([]);
 
 	function addToCart(newOrder) {
-		let newCartContents = cartContents.map((element) => element);
+		let newCartContents = [...cartContents];
 
 		let existingProductKey = newCartContents.findIndex(
 			(product) => product.key === newOrder.key
@@ -26,6 +26,21 @@ function App() {
 			newCartContents[existingProductKey].quantity =
 				newCartContents[existingProductKey].quantity + newOrder.quantity;
 		}
+
+		setCartContents(newCartContents);
+	}
+
+	function handleChange(e) {
+		const { name, value } = e.target;
+
+		const productToBeChangedIndex = cartContents.findIndex(
+			(arrElement) => arrElement.name === name
+		);
+
+		let newCartContents = [...cartContents];
+		newCartContents[productToBeChangedIndex].quantity = Math.round(
+			Number(value)
+		);
 
 		setCartContents(newCartContents);
 	}
@@ -59,7 +74,10 @@ function App() {
 							path="/checkout"
 							render={() => (
 								<div className={styles.shopContainer}>
-									<Checkout cartContents={cartContents} />
+									<Checkout
+										cartContents={cartContents}
+										handleChange={handleChange}
+									/>
 								</div>
 							)}
 						/>

@@ -6,7 +6,7 @@ import { products } from "../assets/products.js";
 
 import styles from "../styles/Pages/Checkout.module.css";
 
-function Checkout({ cartContents }) {
+function Checkout({ cartContents, handleChange }) {
 	const [isThereProducts, setIsThereProducts] = useState();
 
 	useEffect(() => {
@@ -14,15 +14,20 @@ function Checkout({ cartContents }) {
 		if (cartContents.length === 0) setIsThereProducts(false);
 	}, [cartContents]);
 
-	const checkoutComponents = cartContents.map((order) => {
+	const checkoutComponents = cartContents.map((order, index) => {
 		return (
-			<div className={styles.singleOrder}>
+			<div key={index} className={styles.singleOrder}>
 				<img src={products[order.key].img} alt={order.name} />
 				<section>
 					<h2>{order.name}</h2>
 					<div>
-						{/* FIXME - send props from App with quantity on state and onChange handler */}
-						<input type="number" value={order.quantity} />
+						<input
+							type="number"
+							min="1"
+							name={order.name}
+							value={order.quantity}
+							onChange={handleChange}
+						/>
 						{/* TODO - add functionality to the buttons */}
 						<span>-</span>
 						<span>+</span>
