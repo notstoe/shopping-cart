@@ -10,6 +10,10 @@ function Checkout({ cartContents, handleChange, handleBtnCheckout }) {
 	const [isThereProducts, setIsThereProducts] = useState();
 	const [totalPrice, setTotalPrice] = useState();
 
+	function handlePayment() {
+		alert("Thanks for visiting!");
+	}
+
 	useEffect(() => {
 		if (cartContents.length > 0) {
 			setIsThereProducts(true);
@@ -60,7 +64,7 @@ function Checkout({ cartContents, handleChange, handleBtnCheckout }) {
 						<span>${totalPrice}</span>
 					</section>
 					<div>
-						<button>Proceed to Payment</button>
+						<button onClick={handlePayment}>Proceed to Payment</button>
 						<Link to="/shop">Back</Link>
 					</div>
 				</div>
