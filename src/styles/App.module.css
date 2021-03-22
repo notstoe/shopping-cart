@@ -67,3 +67,26 @@
 		width: 50%;
 	}
 }
+
+@media (max-width: 1350px) {
+	.homeContainer {
+		background-position: left -12vw bottom 48%;
+		background-size: 100rem;
+	}
+}
+
+@media (max-width: 1000px) {
+	.homeContainer {
+		background-image: url("../assets/bg-horizontal.png");
+		background-position: top 8% left 50%;
+		background-size: 51rem;
+		background-color: var(--deepblack);
+		background-repeat: no-repeat;
+	}
+}
+
+@media (max-width: 1000px) and (min-width: 750px) {
+	.homeContainer {
+		background-size: 60rem;
+	}
+}

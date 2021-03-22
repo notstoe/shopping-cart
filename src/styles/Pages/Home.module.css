@@ -6,7 +6,7 @@
 	justify-content: space-between;
 
 	min-height: 10rem;
-	margin-right: 17rem;
+	margin-right: 14rem;
 }
 
 .homeContent h1 {
@@ -23,7 +23,7 @@
 	flex-direction: column;
 	justify-content: center;
 
-	height: 10vw;
+	min-height: 10vw;
 
 	text-align: end;
 	min-width: 20rem;
@@ -62,5 +62,34 @@
 	}
 	100% {
 		transform: rotate(0deg);
+	}
+}
+
+@media (max-width: 1350px) {
+	.homeContent {
+		margin-right: 10rem;
+	}
+}
+
+@media (max-width: 1080px) {
+	.homeContent {
+		margin-right: 5rem;
+	}
+}
+
+@media (max-width: 1000px) {
+	.homeContent {
+		margin: 27vh auto 0 auto;
+	}
+
+	.homeContent > div {
+		text-align: center;
+		padding: 2rem;
+	}
+
+	.homeContent h1 {
+		text-align: center;
+		padding-right: 1rem;
+		padding-left: 1rem;
 	}
 }
