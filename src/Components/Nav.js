@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { motion } from "framer-motion";
 import styles from "../styles/Components/Nav.module.css";
 
 function Nav({ cartContents }) {
@@ -18,8 +19,18 @@ function Nav({ cartContents }) {
 
 	return (
 		<div className={styles.navBar}>
-			<Link to="/">CLOCKY</Link>
-			<ul>
+			<motion.div
+				initial={{ y: "-100vh" }}
+				animate={{ y: 0 }}
+				transition={{ type: "spring", stiffness: 40 }}
+			>
+				<Link to="/">CLOCKY</Link>
+			</motion.div>
+			<motion.ul
+				initial={{ y: "-100vh" }}
+				animate={{ y: 0 }}
+				transition={{ type: "spring", stiffness: 40 }}
+			>
 				<li>
 					<Link to="/">Home</Link>
 				</li>
@@ -49,7 +60,7 @@ function Nav({ cartContents }) {
 						<span>{totalQuantity}</span>
 					</Link>
 				</li>
-			</ul>
+			</motion.ul>
 		</div>
 	);
 }
