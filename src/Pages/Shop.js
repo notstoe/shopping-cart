@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import styles from "../styles/Pages/Shop.module.css";
+import { motion } from "framer-motion";
 
 import { products } from "../assets/products.js";
 
@@ -18,10 +19,15 @@ function Shop() {
 	});
 
 	return (
-		<div className={styles.shopContent}>
+		<motion.div
+			className={styles.shopContent}
+			initial={{ y: "-40vh" }}
+			animate={{ y: 0 }}
+			transition={{ type: "spring", duration: 0.3 }}
+		>
 			<h1>WALL CLOCKS</h1>
 			<div>{shopDisplay}</div>
-		</div>
+		</motion.div>
 	);
 }
 
