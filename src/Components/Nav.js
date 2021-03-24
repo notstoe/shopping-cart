@@ -17,20 +17,17 @@ function Nav({ cartContents }) {
 		setTotalQuantity(newQuantity);
 	}, [cartContents]);
 
+	const navVariants = {
+		hidden: { y: "-100vh" },
+		visible: { y: 0, transition: { type: "spring", stiffness: 40 } },
+	};
+
 	return (
 		<div className={styles.navBar}>
-			<motion.div
-				initial={{ y: "-100vh" }}
-				animate={{ y: 0 }}
-				transition={{ type: "spring", stiffness: 40 }}
-			>
+			<motion.div variants={navVariants} initial="hidden" animate="visible">
 				<Link to="/">CLOCKY</Link>
 			</motion.div>
-			<motion.ul
-				initial={{ y: "-100vh" }}
-				animate={{ y: 0 }}
-				transition={{ type: "spring", stiffness: 40 }}
-			>
+			<motion.ul variants={navVariants} initial="hidden" animate="visible">
 				<li>
 					<Link to="/">Home</Link>
 				</li>
