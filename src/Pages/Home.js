@@ -10,7 +10,7 @@ function Home() {
 			className={styles.homeContent}
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
-			transition={{ type: "tween", delay: 0.5 }}
+			transition={{ type: "tween", delay: 0.2 }}
 		>
 			<h1>
 				Order your exclusive <span>clock</span> with us today!
