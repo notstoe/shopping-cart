@@ -18,15 +18,28 @@ function Shop() {
 		);
 	});
 
+	const contentContainerVariants = {
+		hidden: { y: "-45vh" },
+		visible: { y: 0 },
+		transition: { type: "spring", duration: 0.3 },
+	};
+
+	const productsContainerVariants = {
+		hidden: { opacity: 0 },
+		visible: { opacity: 1 },
+	};
+
 	return (
 		<motion.div
 			className={styles.shopContent}
-			initial={{ y: "-40vh" }}
-			animate={{ y: 0 }}
-			transition={{ type: "spring", duration: 0.3 }}
+			variants={contentContainerVariants}
+			initial="hidden"
+			animate="visible"
 		>
 			<h1>WALL CLOCKS</h1>
-			<div>{shopDisplay}</div>
+			<motion.div variants={productsContainerVariants}>
+				{shopDisplay}
+			</motion.div>
 		</motion.div>
 	);
 }
