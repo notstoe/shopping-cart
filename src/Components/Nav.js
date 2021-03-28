@@ -19,15 +19,27 @@ function Nav({ cartContents }) {
 
 	const navVariants = {
 		hidden: { y: "-100vh" },
-		visible: { y: 0, transition: { type: "spring", stiffness: 40 } },
+		visible: {
+			y: 0,
+			transition: {
+				type: "spring",
+				duration: 1,
+				delay: 0.4,
+			},
+		},
 	};
 
 	return (
-		<div className={styles.navBar}>
-			<motion.div variants={navVariants} initial="hidden" animate="visible">
+		<motion.div
+			className={styles.navBar}
+			variants={navVariants}
+			initial="hidden"
+			animate="visible"
+		>
+			<div>
 				<Link to="/">CLOCKY</Link>
-			</motion.div>
-			<motion.ul variants={navVariants} initial="hidden" animate="visible">
+			</div>
+			<ul>
 				<li>
 					<Link to="/">Home</Link>
 				</li>
@@ -57,8 +69,8 @@ function Nav({ cartContents }) {
 						<span>{totalQuantity}</span>
 					</Link>
 				</li>
-			</motion.ul>
-		</div>
+			</ul>
+		</motion.div>
 	);
 }
 
