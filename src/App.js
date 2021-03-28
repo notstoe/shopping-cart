@@ -72,9 +72,16 @@ function App() {
 		setCartContents(newCartContents);
 	}
 
-	const homepageVariants = {
+	const homePageVariants = {
 		hidden: { opacity: 0 },
 		visible: { opacity: 1, transition: { type: "tween", delay: 0.2 } },
+		exit: { opacity: 0 },
+	};
+
+	const shopPageVariants = {
+		hidden: { opacity: 0 },
+		visible: { opacity: 1 },
+		exit: { opacity: 0 },
 	};
 
 	return (
@@ -86,17 +93,24 @@ function App() {
 						<Route exact path="/">
 							<motion.div
 								className={styles.homeContainer}
-								variants={homepageVariants}
+								variants={homePageVariants}
 								initial="hidden"
 								animate="visible"
+								exit="exit"
 							>
 								<Home />
 							</motion.div>
 						</Route>
 						<Route exact path="/shop">
-							<div className={styles.shopContainer}>
+							<motion.div
+								className={styles.shopContainer}
+								variants={shopPageVariants}
+								initial="hidden"
+								animate="visible"
+								exit="exit"
+							>
 								<Shop />
-							</div>
+							</motion.div>
 						</Route>
 						<Route
 							path="/shop/:id"
@@ -110,13 +124,19 @@ function App() {
 						<Route
 							path="/checkout"
 							render={() => (
-								<div className={styles.shopContainer}>
+								<motion.div
+									className={styles.shopContainer}
+									variants={shopPageVariants}
+									initial="hidden"
+									animate="visible"
+									exit="exit"
+								>
 									<Checkout
 										cartContents={cartContents}
 										handleChange={handleChange}
 										handleBtnCheckout={handleBtnCheckout}
 									/>
-								</div>
+								</motion.div>
 							)}
 						/>
 					</Switch>

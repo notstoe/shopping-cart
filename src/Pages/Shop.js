@@ -19,9 +19,11 @@ function Shop() {
 	});
 
 	const contentContainerVariants = {
-		hidden: { y: "-45vh" },
-		visible: { y: 0 },
-		transition: { type: "spring", duration: 0.3 },
+		hidden: { y: "-50vh" },
+		visible: {
+			y: 0,
+			transition: { type: "spring", duration: 0.33 },
+		},
 	};
 
 	const productsContainerVariants = {
