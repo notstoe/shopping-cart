@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 
 import styles from "./styles/App.module.css";
+import { AnimatePresence, motion } from "framer-motion";
 
 import Nav from "./Components/Nav";
 import Home from "./Pages/Home";
@@ -10,6 +11,7 @@ import ProductDisplay from "./Pages/ProdctDisplay";
 import Checkout from "./Pages/Checkout";
 
 function App() {
+	const location = useLocation();
 	const [cartContents, setCartContents] = useState([]);
 
 	function addToCart(newOrder) {
@@ -70,16 +72,26 @@ function App() {
 		setCartContents(newCartContents);
 	}
 
+	const homepageVariants = {
+		hidden: { opacity: 0 },
+		visible: { opacity: 1, transition: { type: "tween", delay: 0.2 } },
+	};
+
 	return (
-		<Router>
+		<AnimatePresence>
 			<div className={styles.pageContainer}>
 				<Nav cartContents={cartContents} />
 				<div>
-					<Switch>
+					<Switch location={location} key={location.key}>
 						<Route exact path="/">
-							<div className={styles.homeContainer}>
+							<motion.div
+								className={styles.homeContainer}
+								variants={homepageVariants}
+								initial="hidden"
+								animate="visible"
+							>
 								<Home />
-							</div>
+							</motion.div>
 						</Route>
 						<Route exact path="/shop">
 							<div className={styles.shopContainer}>
@@ -110,7 +122,7 @@ function App() {
 					</Switch>
 				</div>
 			</div>
-		</Router>
+		</AnimatePresence>
 	);
 }
 
