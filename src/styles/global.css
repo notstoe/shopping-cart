@@ -21,6 +21,10 @@
 	--fullwhite: #ffffff;
 }
 
+html {
+	background: var(--deepblack);
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
