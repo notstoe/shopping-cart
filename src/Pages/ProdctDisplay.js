@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import styles from "../styles/Pages/ProdctDisplay.module.css";
+import { motion } from "framer-motion";
 
 import { products } from "../assets/products.js";
 
@@ -33,9 +34,31 @@ function ProdctDisplay({ match, addToCart }) {
 		setIsAddedToCart(true);
 	}
 
+	const productDisplayVariants = {
+		hidden: { y: "-30vh" },
+		visible: {
+			y: 0,
+			transition: { type: "spring", duration: 0.3 },
+		},
+		exit: { opacity: 0 },
+	};
+
+	const btnVariants = {
+		hidden: { x: "-100vw" },
+		visible: {
+			x: 0,
+			transition: { type: "spring", mass: 0.5, damping: 8 },
+		},
+	};
+
 	return (
 		<div className={styles.productDisplayContainer}>
-			<div>
+			<motion.div
+				variants={productDisplayVariants}
+				initial="hidden"
+				animate="visible"
+				exit="exit"
+			>
 				<h1>{selectedProduct.name}</h1>
 				<img src={selectedProduct.img} alt={selectedProduct.name} />
 				<span>${selectedProduct.price}</span>
@@ -54,21 +77,22 @@ function ProdctDisplay({ match, addToCart }) {
 				{!isAddedToCart ? (
 					<>
 						<button onClick={handleBtnClick}>Add to Cart</button>
+
 						<Link className={styles.backLink} to="/shop">
 							Back
 						</Link>
 					</>
 				) : (
 					<>
-						<Link className={styles.checkoutLink} to="/checkout">
-							Proceed to Checkout
-						</Link>
+						<motion.div variants={btnVariants} className={styles.checkoutLink}>
+							<Link to="/checkout">Proceed to Checkout</Link>
+						</motion.div>
 						<Link className={styles.backLink} to="/shop">
 							Back
 						</Link>
 					</>
 				)}
-			</div>
+			</motion.div>
 		</div>
 	);
 }

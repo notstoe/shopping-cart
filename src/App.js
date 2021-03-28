@@ -85,7 +85,7 @@ function App() {
 	};
 
 	return (
-		<AnimatePresence>
+		<AnimatePresence exitBeforeEnter>
 			<div className={styles.pageContainer}>
 				<Nav cartContents={cartContents} />
 				<div>

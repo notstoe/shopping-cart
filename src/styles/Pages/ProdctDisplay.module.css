@@ -103,5 +103,7 @@ a {
 }
 
 .checkoutLink:hover {
+	cursor: pointer;
+
 	background: var(--coolwhite);
 }
