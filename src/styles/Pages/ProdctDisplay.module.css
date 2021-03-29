@@ -13,7 +13,7 @@
 	background-size: cover;
 	background-position: center;
 
-	padding: 0.8rem 1.2rem 5rem 1.2rem;
+	padding: 0.7rem 1.2rem;
 }
 
 .productDisplayContainer > div {
@@ -24,8 +24,6 @@
 	max-width: 43rem;
 
 	background-color: var(--fullwhite);
-
-	/* padding: 1.5rem 11rem; */
 
 	display: flex;
 	flex-direction: column;
@@ -106,4 +104,10 @@ a {
 	cursor: pointer;
 
 	background: var(--coolwhite);
+}
+
+@media (max-width: 700px) {
+	.productDisplayContainer {
+		padding: 0.7rem 1.2rem 5rem 1.2rem;
+	}
 }

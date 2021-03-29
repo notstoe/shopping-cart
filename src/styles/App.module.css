@@ -43,7 +43,7 @@
 .shopContainer {
 	flex: 1 1 0%;
 
-	padding: 0.8rem 1.2rem 5rem 1.2rem;
+	padding: 0.7rem 1.2rem;
 
 	display: flex;
 	flex-direction: column;
@@ -87,5 +87,11 @@
 @media (max-width: 1000px) and (min-width: 750px) {
 	.homeContainer {
 		background-size: 60rem;
+	}
+}
+
+@media (max-width: 700px) {
+	.shopContainer {
+		padding: 0.7rem 1.2rem 5rem 1.2rem;
 	}
 }
