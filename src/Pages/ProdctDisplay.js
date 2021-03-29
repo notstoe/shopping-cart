@@ -47,7 +47,7 @@ function ProdctDisplay({ match, addToCart }) {
 		hidden: { x: "-100vw" },
 		visible: {
 			x: 0,
-			transition: { type: "spring", mass: 0.5, damping: 8 },
+			transition: { type: "spring", mass: 0.5, damping: 9 },
 		},
 	};
 
