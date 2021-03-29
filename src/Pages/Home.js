@@ -13,7 +13,7 @@ function Home() {
 				<p>"Better three hours too soon than a minute too late."</p>
 				<span> – William Shakespeare</span>
 			</div>
-			<Link to="/shop">VISIT THE SHOP</Link>
+			<Link to="/shopping-cart/shop">VISIT THE SHOP</Link>
 		</div>
 	);
 }

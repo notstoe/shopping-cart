@@ -108,7 +108,7 @@ function Checkout({ cartContents, handleChange, handleBtnCheckout }) {
 					</section>
 					<div>
 						<button onClick={handlePayment}>Proceed to Payment</button>
-						<Link to="/shop">Back</Link>
+						<Link to="/shopping-cart/shop">Back</Link>
 					</div>
 				</div>
 			) : (
@@ -118,7 +118,7 @@ function Checkout({ cartContents, handleChange, handleBtnCheckout }) {
 				>
 					<img src={cart} alt="Empty Cart" />
 					<p>Your cart is empty.</p>
-					<Link to="/shop">Back to shop</Link>
+					<Link to="/shopping-cart/shop">Back to shop</Link>
 				</motion.div>
 			)}
 		</motion.div>

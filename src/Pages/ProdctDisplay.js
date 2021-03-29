@@ -78,16 +78,16 @@ function ProdctDisplay({ match, addToCart }) {
 					<>
 						<button onClick={handleBtnClick}>Add to Cart</button>
 
-						<Link className={styles.backLink} to="/shop">
+						<Link className={styles.backLink} to="/shopping-cart/shop">
 							Back
 						</Link>
 					</>
 				) : (
 					<>
 						<motion.div variants={btnVariants} className={styles.checkoutLink}>
-							<Link to="/checkout">Proceed to Checkout</Link>
+							<Link to="/shopping-cart/checkout">Proceed to Checkout</Link>
 						</motion.div>
-						<Link className={styles.backLink} to="/shop">
+						<Link className={styles.backLink} to="/shopping-cart/shop">
 							Back
 						</Link>
 					</>

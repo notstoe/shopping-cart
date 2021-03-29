@@ -37,17 +37,17 @@ function Nav({ cartContents }) {
 			animate="visible"
 		>
 			<div>
-				<Link to="/">CLOCKY</Link>
+				<Link to="/shopping-cart/">CLOCKY</Link>
 			</div>
 			<ul>
 				<li>
-					<Link to="/">Home</Link>
+					<Link to="/shopping-cart/">Home</Link>
 				</li>
 				<li>
-					<Link to="/shop">Shop</Link>
+					<Link to="/shopping-cart/shop">Shop</Link>
 				</li>
 				<li>
-					<Link className={styles.cartContainer} to="/checkout">
+					<Link className={styles.cartContainer} to="/shopping-cart/checkout">
 						<svg x="0px" y="0px" viewBox="0 0 476.944 476.944">
 							<g>
 								<path

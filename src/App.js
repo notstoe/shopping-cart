@@ -90,7 +90,7 @@ function App() {
 				<Nav cartContents={cartContents} />
 				<div>
 					<Switch location={location} key={location.key}>
-						<Route exact path="/">
+						<Route exact path="/shopping-cart/">
 							<motion.div
 								className={styles.homeContainer}
 								variants={homePageVariants}
@@ -101,7 +101,7 @@ function App() {
 								<Home />
 							</motion.div>
 						</Route>
-						<Route exact path="/shop">
+						<Route exact path="/shopping-cart/shop">
 							<motion.div
 								className={styles.shopContainer}
 								variants={shopPageVariants}
@@ -113,7 +113,7 @@ function App() {
 							</motion.div>
 						</Route>
 						<Route
-							path="/shop/:id"
+							path="/shopping-cart/shop/:id"
 							render={(routeProps) => (
 								<ProductDisplay
 									addToCart={addToCart}
@@ -122,7 +122,7 @@ function App() {
 							)}
 						/>
 						<Route
-							path="/checkout"
+							path="/shopping-cart/checkout"
 							render={() => (
 								<motion.div
 									className={styles.shopContainer}
