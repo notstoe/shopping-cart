@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.23afc526.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.1c357e1b.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.1c357e1b.chunk.js.map",
+    "runtime-main.js": "/shopping-cart/static/js/runtime-main.b6a2e420.js",
+    "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.b6a2e420.js.map",
+    "static/js/2.57dfa633.chunk.js": "/shopping-cart/static/js/2.57dfa633.chunk.js",
+    "static/js/2.57dfa633.chunk.js.map": "/shopping-cart/static/js/2.57dfa633.chunk.js.map",
+    "index.html": "/shopping-cart/index.html",
+    "static/css/main.23afc526.chunk.css.map": "/shopping-cart/static/css/main.23afc526.chunk.css.map",
+    "static/js/2.57dfa633.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.57dfa633.chunk.js.LICENSE.txt",
+    "static/media/ProdctDisplay.module.css": "/shopping-cart/static/media/backgroundShop.ea73548b.svg",
+    "static/media/backtothefuture.a4b60d36.png": "/shopping-cart/static/media/backtothefuture.a4b60d36.png",
+    "static/media/App.module.css": "/shopping-cart/static/media/bg-vertical.55c5bc0e.png",
+    "static/media/cartCheckout.b1c71bda.svg": "/shopping-cart/static/media/cartCheckout.b1c71bda.svg",
+    "static/media/concreteTangerineWhite.316ae359.png": "/shopping-cart/static/media/concreteTangerineWhite.316ae359.png",
+    "static/media/honeycomb.594fdd70.png": "/shopping-cart/static/media/honeycomb.594fdd70.png",
+    "static/media/legendofZelda.55c58992.png": "/shopping-cart/static/media/legendofZelda.55c58992.png",
+    "static/media/minimalist.7bc8cd14.png": "/shopping-cart/static/media/minimalist.7bc8cd14.png",
+    "static/media/steampunk.c664f150.png": "/shopping-cart/static/media/steampunk.c664f150.png",
+    "static/media/trusttheprocess.07b483dc.png": "/shopping-cart/static/media/trusttheprocess.07b483dc.png",
+    "static/media/worldMap.cd16f912.png": "/shopping-cart/static/media/worldMap.cd16f912.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b6a2e420.js",
+    "static/js/2.57dfa633.chunk.js",
+    "static/css/main.23afc526.chunk.css",
+    "static/js/main.1c357e1b.chunk.js"
+  ]
+}
