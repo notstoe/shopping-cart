@@ -9,10 +9,10 @@
 The main objectives of this project are to:
 
 - Create a simple static Webpage for an E-commerce business
-- Use the React Router DOM and manage different routes in the website
+- Use the React Router DOM and manage different routes
 - Use the modern React syntax of Hooks
 - Further practice React development and JSX proficiency
-- Practice using the Framer Motion animation library
+- Practice using Framer Motion animation library
 - Practice designing website in Figma prior to coding
 
 # libraries, extensions and tools
