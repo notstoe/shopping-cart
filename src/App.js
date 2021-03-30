@@ -9,6 +9,7 @@ import Home from "./Pages/Home";
 import Shop from "./Pages/Shop";
 import ProductDisplay from "./Pages/ProdctDisplay";
 import Checkout from "./Pages/Checkout";
+import PageNotFound from "./Pages/PageNotFound";
 
 function App() {
 	const location = useLocation();
@@ -136,6 +137,20 @@ function App() {
 										handleChange={handleChange}
 										handleBtnCheckout={handleBtnCheckout}
 									/>
+								</motion.div>
+							)}
+						/>
+						<Route
+							path="/shopping-cart/"
+							render={() => (
+								<motion.div
+									className={styles.shopContainer}
+									variants={shopPageVariants}
+									initial="hidden"
+									animate="visible"
+									exit="exit"
+								>
+									<PageNotFound />
 								</motion.div>
 							)}
 						/>
