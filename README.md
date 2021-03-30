@@ -25,6 +25,6 @@ The main objectives of this project are to:
 
 # more information
 
-Design based on mockup built in Figma [shopping-cart](https://www.figma.com/file/lJZHoK0NGz5CNoFgzTVpci/shopping-cart?node-id=0%3A1)
+Design based on early mockup built in Figma [shopping-cart](https://www.figma.com/file/lJZHoK0NGz5CNoFgzTVpci/shopping-cart?node-id=0%3A1)
 
 [The Odin Project](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/shopping-cart)
