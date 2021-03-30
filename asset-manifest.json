@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.b228824a.chunk.css",
-    "main.js": "/shopping-cart/static/js/main.7e0e2688.chunk.js",
-    "main.js.map": "/shopping-cart/static/js/main.7e0e2688.chunk.js.map",
+    "main.css": "/shopping-cart/static/css/main.13addb21.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.f14387eb.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.f14387eb.chunk.js.map",
     "runtime-main.js": "/shopping-cart/static/js/runtime-main.b6a2e420.js",
     "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.b6a2e420.js.map",
-    "static/js/2.57dfa633.chunk.js": "/shopping-cart/static/js/2.57dfa633.chunk.js",
-    "static/js/2.57dfa633.chunk.js.map": "/shopping-cart/static/js/2.57dfa633.chunk.js.map",
+    "static/js/2.7cf97486.chunk.js": "/shopping-cart/static/js/2.7cf97486.chunk.js",
+    "static/js/2.7cf97486.chunk.js.map": "/shopping-cart/static/js/2.7cf97486.chunk.js.map",
     "index.html": "/shopping-cart/index.html",
-    "static/css/main.b228824a.chunk.css.map": "/shopping-cart/static/css/main.b228824a.chunk.css.map",
-    "static/js/2.57dfa633.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.57dfa633.chunk.js.LICENSE.txt",
+    "static/css/main.13addb21.chunk.css.map": "/shopping-cart/static/css/main.13addb21.chunk.css.map",
+    "static/js/2.7cf97486.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.7cf97486.chunk.js.LICENSE.txt",
     "static/media/ProdctDisplay.module.css": "/shopping-cart/static/media/backgroundShop.ea73548b.svg",
     "static/media/backtothefuture.a4b60d36.png": "/shopping-cart/static/media/backtothefuture.a4b60d36.png",
     "static/media/App.module.css": "/shopping-cart/static/media/bg-vertical.55c5bc0e.png",
@@ -17,6 +17,7 @@
     "static/media/concreteTangerineWhite.316ae359.png": "/shopping-cart/static/media/concreteTangerineWhite.316ae359.png",
     "static/media/honeycomb.594fdd70.png": "/shopping-cart/static/media/honeycomb.594fdd70.png",
     "static/media/legendofZelda.55c58992.png": "/shopping-cart/static/media/legendofZelda.55c58992.png",
+    "static/media/lostIcon.abc34b2a.svg": "/shopping-cart/static/media/lostIcon.abc34b2a.svg",
     "static/media/minimalist.7bc8cd14.png": "/shopping-cart/static/media/minimalist.7bc8cd14.png",
     "static/media/steampunk.c664f150.png": "/shopping-cart/static/media/steampunk.c664f150.png",
     "static/media/trusttheprocess.07b483dc.png": "/shopping-cart/static/media/trusttheprocess.07b483dc.png",
@@ -24,8 +25,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b6a2e420.js",
-    "static/js/2.57dfa633.chunk.js",
-    "static/css/main.b228824a.chunk.css",
-    "static/js/main.7e0e2688.chunk.js"
+    "static/js/2.7cf97486.chunk.js",
+    "static/css/main.13addb21.chunk.css",
+    "static/js/main.f14387eb.chunk.js"
   ]
 }
