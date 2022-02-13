@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import styles from "../styles/Pages/ProdctDisplay.module.css";
-import { motion } from "framer-motion";
+import styles from '../styles/Pages/ProdctDisplay.module.css';
+import { motion } from 'framer-motion';
 
-import { products } from "../assets/products.js";
+import { products } from '../assets/products.js';
 
 function ProdctDisplay({ match, addToCart }) {
 	const arrIndex = match.params.id; //gets the index position in the products.js array corresponding to that product
@@ -35,65 +35,77 @@ function ProdctDisplay({ match, addToCart }) {
 	}
 
 	const productDisplayVariants = {
-		hidden: { y: "-30vh" },
+		hidden: { y: '-30vh' },
 		visible: {
 			y: 0,
-			transition: { type: "spring", duration: 0.3 },
+			transition: { type: 'spring', duration: 0.3 },
 		},
 		exit: { opacity: 0 },
 	};
 
 	const btnVariants = {
-		hidden: { x: "-100vw" },
+		hidden: { x: '-100vw' },
 		visible: {
 			x: 0,
-			transition: { type: "spring", mass: 0.5, damping: 9 },
+			transition: { type: 'spring', mass: 0.5, damping: 9 },
 		},
 	};
 
 	return (
-		<div className={styles.productDisplayContainer}>
-			<motion.div
-				variants={productDisplayVariants}
-				initial="hidden"
-				animate="visible"
-				exit="exit"
-			>
-				<h1>{selectedProduct.name}</h1>
-				<img src={selectedProduct.img} alt={selectedProduct.name} />
-				<span>${selectedProduct.price}</span>
-				<div>
-					<label htmlFor="quantity">Quantity:</label>
-					<input
-						name="quantity"
-						type="number"
-						min="1"
-						value={quantity}
-						onChange={handleChangeQuantity}
-						disabled={isAddedToCart}
-					></input>
-				</div>
+		<>
+			<head>
+				<title>Clocky Shop | {selectedProduct.name}</title>
+				<meta
+					property='og:url'
+					content={`https://notstoe.github.io/shopping-cart/shop/${selectedProduct.name}`}
+				/>
+			</head>
+			<div className={styles.productDisplayContainer}>
+				<motion.div
+					variants={productDisplayVariants}
+					initial='hidden'
+					animate='visible'
+					exit='exit'
+				>
+					<h1>{selectedProduct.name}</h1>
+					<img src={selectedProduct.img} alt={selectedProduct.name} />
+					<span>${selectedProduct.price}</span>
+					<div>
+						<label htmlFor='quantity'>Quantity:</label>
+						<input
+							name='quantity'
+							type='number'
+							min='1'
+							value={quantity}
+							onChange={handleChangeQuantity}
+							disabled={isAddedToCart}
+						></input>
+					</div>
 
-				{!isAddedToCart ? (
-					<>
-						<button onClick={handleBtnClick}>Add to Cart</button>
+					{!isAddedToCart ? (
+						<>
+							<button onClick={handleBtnClick}>Add to Cart</button>
 
-						<Link className={styles.backLink} to="/shopping-cart/shop">
-							Back
-						</Link>
-					</>
-				) : (
-					<>
-						<motion.div variants={btnVariants} className={styles.checkoutLink}>
-							<Link to="/shopping-cart/checkout">Proceed to Checkout</Link>
-						</motion.div>
-						<Link className={styles.backLink} to="/shopping-cart/shop">
-							Back
-						</Link>
-					</>
-				)}
-			</motion.div>
-		</div>
+							<Link className={styles.backLink} to='/shopping-cart/shop'>
+								Back
+							</Link>
+						</>
+					) : (
+						<>
+							<motion.div
+								variants={btnVariants}
+								className={styles.checkoutLink}
+							>
+								<Link to='/shopping-cart/checkout'>Proceed to Checkout</Link>
+							</motion.div>
+							<Link className={styles.backLink} to='/shopping-cart/shop'>
+								Back
+							</Link>
+						</>
+					)}
+				</motion.div>
+			</div>
+		</>
 	);
 }
 

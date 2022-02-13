@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import cart from "../assets/cartCheckout.svg";
-import { products } from "../assets/products.js";
+import cart from '../assets/cartCheckout.svg';
+import { products } from '../assets/products.js';
 
-import styles from "../styles/Pages/Checkout.module.css";
-import { AnimatePresence, motion } from "framer-motion";
+import styles from '../styles/Pages/Checkout.module.css';
+import { AnimatePresence, motion } from 'framer-motion';
 
 function Checkout({ cartContents, handleChange, handleBtnCheckout }) {
 	const [isThereProducts, setIsThereProducts] = useState();
 	const [totalPrice, setTotalPrice] = useState();
 
 	function handlePayment() {
-		alert("Thanks for visiting!");
+		alert('Thanks for visiting!');
 	}
 
 	useEffect(() => {
@@ -31,16 +31,16 @@ function Checkout({ cartContents, handleChange, handleBtnCheckout }) {
 	}, [cartContents]);
 
 	const productsVariants = {
-		hidden: { opacity: 0, x: "-20vw" },
+		hidden: { opacity: 0, x: '-20vw' },
 		visible: {
 			opacity: 1,
-			x: "0",
-			transition: { type: "tween", duration: 0.4 },
+			x: '0',
+			transition: { type: 'tween', duration: 0.4 },
 		},
 		exit: {
 			scale: 0,
-			x: "20vw",
-			transition: { ease: "easeInOut" },
+			x: '20vw',
+			transition: { ease: 'easeInOut' },
 		},
 	};
 
@@ -50,9 +50,9 @@ function Checkout({ cartContents, handleChange, handleBtnCheckout }) {
 				key={order.name}
 				className={styles.singleOrder}
 				variants={productsVariants}
-				initial="hidden"
-				visible="visible"
-				exit="exit"
+				initial='hidden'
+				visible='visible'
+				exit='exit'
 			>
 				<img src={products[order.key].img} alt={order.name} />
 				<section>
@@ -60,8 +60,8 @@ function Checkout({ cartContents, handleChange, handleBtnCheckout }) {
 					<div>
 						<input
 							name={order.name}
-							type="number"
-							min="1"
+							type='number'
+							min='1'
 							value={order.quantity}
 							onChange={handleChange}
 						/>
@@ -76,10 +76,10 @@ function Checkout({ cartContents, handleChange, handleBtnCheckout }) {
 	});
 
 	const checkoutVariants = {
-		hidden: { y: "-40vh" },
+		hidden: { y: '-40vh' },
 		visible: {
 			y: 0,
-			transition: { type: "spring", duration: 0.3 },
+			transition: { type: 'spring', duration: 0.3 },
 		},
 		exit: { opacity: 0 },
 	};
@@ -91,37 +91,46 @@ function Checkout({ cartContents, handleChange, handleBtnCheckout }) {
 	};
 
 	return (
-		<motion.div
-			className={styles.checkout}
-			variants={checkoutVariants}
-			initial="hidden"
-			animate="visible"
-			exit="exit"
-		>
-			<h1>CHECKOUT</h1>
-			{isThereProducts ? (
-				<div className={styles.checkoutFull}>
-					<AnimatePresence>{checkoutComponents}</AnimatePresence>
-					<section>
-						<span>TOTAL: </span>
-						<span>${totalPrice}</span>
-					</section>
-					<div>
-						<button onClick={handlePayment}>Proceed to Payment</button>
-						<Link to="/shopping-cart/shop">Back</Link>
+		<>
+			<head>
+				<title>Clocky Shop | Checkout</title>
+				<meta
+					property='og:url'
+					content='https://notstoe.github.io/shopping-cart/checkout'
+				/>
+			</head>
+			<motion.div
+				className={styles.checkout}
+				variants={checkoutVariants}
+				initial='hidden'
+				animate='visible'
+				exit='exit'
+			>
+				<h1>CHECKOUT</h1>
+				{isThereProducts ? (
+					<div className={styles.checkoutFull}>
+						<AnimatePresence>{checkoutComponents}</AnimatePresence>
+						<section>
+							<span>TOTAL: </span>
+							<span>${totalPrice}</span>
+						</section>
+						<div>
+							<button onClick={handlePayment}>Proceed to Payment</button>
+							<Link to='/shopping-cart/shop'>Back</Link>
+						</div>
 					</div>
-				</div>
-			) : (
-				<motion.div
-					className={styles.checkoutEmpty}
-					variants={checkoutEmptyVariants}
-				>
-					<img src={cart} alt="Empty Cart" />
-					<p>Your cart is empty.</p>
-					<Link to="/shopping-cart/shop">Back to shop</Link>
-				</motion.div>
-			)}
-		</motion.div>
+				) : (
+					<motion.div
+						className={styles.checkoutEmpty}
+						variants={checkoutEmptyVariants}
+					>
+						<img src={cart} alt='Empty Cart' />
+						<p>Your cart is empty.</p>
+						<Link to='/shopping-cart/shop'>Back to shop</Link>
+					</motion.div>
+				)}
+			</motion.div>
+		</>
 	);
 }
 
