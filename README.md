@@ -4,6 +4,16 @@
 
 > See it live on [notstoe.github.io/shopping-cart](https://notstoe.github.io/shopping-cart)
 
+<!-- TODO - add video of page animations -->
+
+## Homepage
+
+<img width="720px" src="https://res.cloudinary.com/dowa8tjdi/image/upload/v1644788955/ClockyHomePage_dkeztw.jpg" alt="website home page"/>
+
+## Homepage Mobile
+
+<img width="350px" src="https://res.cloudinary.com/dowa8tjdi/image/upload/v1644788955/clockyHomePageMobile_ycrwy1.jpg" alt="website mobile home page"/>
+
 # objectives
 
 The main objectives of this project are to:
