@@ -38,3 +38,31 @@ The main objectives of this project are to:
 Design based on early mockup built in Figma [shopping-cart](https://www.figma.com/file/lJZHoK0NGz5CNoFgzTVpci/shopping-cart?node-id=0%3A1)
 
 [The Odin Project](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/shopping-cart)
+
+# how to run locally
+
+To clone and run this application:
+
+### Requirements
+
+- git
+- npm
+
+From your command line:
+
+```bash
+# Clone this repository
+$ git clone git@github.com:notstoe/shopping-cart.git
+
+# Navigate to the created folder
+$ cd shopping-cart
+
+# Install dependencies
+$ npm install --save
+
+# Run the app
+$ npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br/></br>
